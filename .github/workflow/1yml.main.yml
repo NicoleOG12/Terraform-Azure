@@ -2,6 +2,19 @@ name: Teste de autenticação Azure
 
 on:
   workflow_dispatch:
+    inputs:
+      azure-client-id:
+        description: 'Azure Client ID'
+        required: true
+        default: ${{ secrets.AZURE_CLIENT_ID }}
+      azure-tenant-id:
+        description: 'Azure Tenant ID'
+        required: true
+        default: ${{ secrets.AZURE_TENANT_ID }}
+      azure-subscription-id:
+        description: 'Azure Subscription ID'
+        required: true
+        default: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
 permissions:
   id-token: write
